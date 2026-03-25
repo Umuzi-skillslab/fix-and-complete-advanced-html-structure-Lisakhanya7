@@ -1,49 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>About Us</title>
+    <!-- Metadata: Complete metadata for SEO and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about our team - professional media production company with 15+ years experience">
+    <meta name="keywords" content="about us, team, media production, video production team">
+    <meta name="author" content="Media Production Company">
+    
+    <!-- Page Title -->
+    <title>About Us - Media Production Company</title>
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="top">
+    <!-- Header with Navigation - Semantic HTML -->
+    <header>
         <h1>About Our Services</h1>
-        <div class="nav">
+        <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="media.html">Media</a>
             <a href="contact.html">Contact</a>
-        </div>
-    </div>
-    
-    <div>
-        <h2>Our Team</h2>
-        <p>We are a team of experienced media professionals dedicated to creating high-quality content.</p>
-    </div>
-    
-    <div>
-        <h2>Services</h2>
-        <!-- Flexbox layout should be here but using basic divs -->
-        <div>
-            <h3>Video Production</h3>
-            <p>Professional video creation for corporate and creative projects.</p>
-        </div>
-        <div>
-            <h3>Audio Recording</h3>
-            <p>Studio-quality audio production and editing services.</p>
-        </div>
-        <!-- Missing third service -->
-    </div>
-    
-    <div>
-        <h2>Portfolio</h2>
-        <!-- Grid gallery missing - just basic layout -->
-        <img src="images/work1.jpg">
-        <img src="images/work2.jpg">
-        <img src="images/work3.jpg">
-    </div>
-    
-    <div class="bottom">
-        <p>Email: contact@mediaproduction.com</p>
-    </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- About Team Section -->
+        <section>
+            <article class="animate-slide-in">
+                <h2>Our Team</h2>
+                <p>We are a team of experienced media professionals dedicated to creating high-quality content. With backgrounds in cinematography, audio engineering, graphic design, and project management, our diverse expertise ensures every project receives comprehensive attention to detail and creative excellence.</p>
+                <p>Our mission is to help businesses communicate their message effectively through compelling multimedia content. We believe in fostering long-term relationships with our clients and becoming their trusted media production partner.</p>
+            </article>
+        </section>
+
+        <!-- Team Members with Grid Layout -->
+        <section>
+            <h2>Meet Our Team Members</h2>
+            <div class="portfolio-grid" style="margin-top: 2rem;">
+                <figure class="portfolio-item">
+                    <img src="images/service1.jpg" alt="Senior Cinematographer">
+                    <figcaption><strong>John Smith</strong> - Senior Cinematographer</figcaption>
+                </figure>
+                <figure class="portfolio-item">
+                    <img src="images/service2.jpg" alt="Audio Engineer">
+                    <figcaption><strong>Sarah Johnson</strong> - Audio Engineer</figcaption>
+                </figure>
+                <figure class="portfolio-item">
+                    <img src="images/client1.jpg" alt="Creative Director">
+                    <figcaption><strong>Michael Chen</strong> - Creative Director</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Services Breakdown Section with Flexbox -->
+        <section>
+            <h2>Our Core Services</h2>
+            <div class="services-container">
+                <div class="service-card transition-shadow">
+                    <h3>🎬 Video Production</h3>
+                    <p>Professional video creation for corporate presentations, commercials, documentaries, educational content, and creative projects. We handle everything from concept development to final delivery.</p>
+                </div>
+                <div class="service-card transition-shadow">
+                    <h3>🎙️ Audio Production</h3>
+                    <p>Studio-quality audio production and editing services including podcasts, audiobooks, voice-overs, musical recordings, and sound design. Our state-of-the-art equipment ensures pristine quality.</p>
+                </div>
+                <div class="service-card transition-shadow">
+                    <h3>📱 Multimedia Solutions</h3>
+                    <p>Comprehensive multimedia design and development including animations, interactive content, web videos, and integrated media experiences for digital platforms and marketing campaigns.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why We Excel Section -->
+        <section>
+            <article>
+                <h2>Why We Excel</h2>
+                <p><strong>Experience:</strong> Over 15 years of successful projects across diverse industries including entertainment, corporate, education, and non-profit sectors.</p>
+                <p><strong>Equipment:</strong> We invest in cutting-edge technology and continuously update our tools to stay current with industry standards.</p>
+                <p><strong>Team Collaboration:</strong> Our multidisciplinary team works together seamlessly to bring unified visions to life with comprehensive expertise.</p>
+                <p><strong>Client Focus:</strong> We prioritize understanding your goals and delivering solutions that exceed expectations.</p>
+                <p><strong>Innovation:</strong> We stay ahead of trends and adopt new techniques to provide fresh, modern approaches to media production.</p>
+            </article>
+        </section>
+
+        <!-- Portfolio Showcase -->
+        <section>
+            <h2>Portfolio</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">A selection of our completed projects showcasing our range and expertise</p>
+            <div class="portfolio-grid">
+                <figure class="portfolio-item">
+                    <img src="images/work1.jpg" alt="Featured video production work">
+                    <figcaption>Corporate Video Series</figcaption>
+                </figure>
+                <figure class="portfolio-item">
+                    <img src="images/work2.jpg" alt="Commercial work example">
+                    <figcaption>Commercial Campaign</figcaption>
+                </figure>
+                <figure class="portfolio-item">
+                    <img src="images/work3.jpg" alt="Documentary project">
+                    <figcaption>Documentary Production</figcaption>
+                </figure>
+                <figure class="portfolio-item">
+                    <img src="images/client2.jpg" alt="Audio project">
+                    <figcaption>Audio Production</figcaption>
+                </figure>
+                <figure class="portfolio-item">
+                    <img src="images/hero-image.jpg" alt="Multimedia project">
+                    <figcaption>Multimedia Design</figcaption>
+                </figure>
+                <figure class="portfolio-item">
+                    <img src="images/service1.jpg" alt="Event coverage">
+                    <figcaption>Event Coverage</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Email:</strong> contact@mediaproduction.com</p>
+        <p><strong>Phone:</strong> 555-0123</p>
+        <p>&copy; 2025 Media Production Company. All rights reserved.</p>
+    </footer>
 </body>
 </html>

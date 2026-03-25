@@ -1,40 +1,227 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Contact</title>
+    <!-- Metadata: Complete metadata for SEO and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact us - Get in touch with our media production team for project inquiries">
+    <meta name="keywords" content="contact, contact form, media production, inquiries, free consultation">
+    <meta name="author" content="Media Production Company">
+    
+    <!-- Page Title -->
+    <title>Contact Us - Media Production Company</title>
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="top">
+    <!-- Header with Navigation - Semantic HTML -->
+    <header>
         <h1>Contact Us</h1>
-        <div class="nav">
+        <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="media.html">Media</a>
             <a href="contact.html">Contact</a>
-        </div>
-    </div>
-    
-    <div>
-        <h2>Get In Touch</h2>
-        
-        <!-- Form with multiple errors -->
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Phone">
-            <textarea placeholder="Message"></textarea>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Contact Information Section -->
+        <section>
+            <article class="animate-fade-in">
+                <h2>Get In Touch</h2>
+                <p>We'd love to hear from you! Whether you have a project in mind, questions about our services, or want to discuss a potential collaboration, please don't hesitate to reach out.</p>
+                <p><strong>📧 Email:</strong> contact@mediaproduction.com</p>
+                <p><strong>📞 Phone:</strong> 555-0123</p>
+                <p><strong>📍 Address:</strong> 123 Media Street, Production City, PC 12345</p>
+                <p><strong>🕒 Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM</p>
+            </article>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section>
+            <h2>Send us a Message</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Fill out the form below and we'll get back to you as soon as possible. All fields marked with * are required.</p>
             
-            <!-- Missing: labels, proper input types (email, tel), validation attributes -->
-            <!-- Missing: radio buttons, checkboxes, select/dropdown, date/number inputs -->
-            <!-- Missing: fieldset for grouping -->
-            
-            <button>Submit</button>
-        </form>
-    </div>
-    
-    <div class="bottom">
-        <p>Email: contact@mediaproduction.com</p>
-    </div>
+            <form method="POST" action="#" class="contact-form">
+                <!-- Personal Information Fieldset -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <!-- Full Name - Required text input -->
+                    <label for="fullname">Full Name *</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required minlength="2" maxlength="100">
+                    
+                    <!-- Email - HTML5 email type with validation -->
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    
+                    <!-- Phone - HTML5 tel type -->
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="555-123-4567" pattern="[0-9\-\+\(\)\s]{10,}">
+                    
+                    <!-- Website - HTML5 url type -->
+                    <label for="website">Website URL</label>
+                    <input type="url" id="website" name="website" placeholder="https://www.yourwebsite.com">
+                </fieldset>
+
+                <!-- Project Information Fieldset -->
+                <fieldset>
+                    <legend>Project Information</legend>
+                    
+                    <!-- Project Type - Select/Dropdown -->
+                    <label for="project-type">Project Type *</label>
+                    <select id="project-type" name="project-type" required>
+                        <option value="">-- Select a project type --</option>
+                        <option value="video">Video Production</option>
+                        <option value="audio">Audio Production</option>
+                        <option value="multimedia">Multimedia Solutions</option>
+                        <option value="other">Other/Not Sure</option>
+                    </select>
+                    
+                    <!-- Budget - HTML5 number input with range -->
+                    <label for="budget">Project Budget ($)</label>
+                    <input type="number" id="budget" name="budget" placeholder="5000" min="500" max="1000000" step="100">
+                    
+                    <!-- Timeline - HTML5 date input -->
+                    <label for="timeline">Desired Start Date</label>
+                    <input type="date" id="timeline" name="timeline">
+                    
+                    <!-- Duration - HTML5 number input -->
+                    <label for="duration">Estimated Duration (in days)</label>
+                    <input type="number" id="duration" name="duration" placeholder="30" min="1" max="365" step="1">
+                </fieldset>
+
+                <!-- Services Interest Fieldset -->
+                <fieldset>
+                    <legend>Services Interested In *</legend>
+                    <p style="font-size: 0.95rem; color: #666; margin-bottom: 1rem;">Select all that apply:</p>
+                    
+                    <!-- Checkboxes for multiple selections -->
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="services" value="video-production">
+                            Video Production
+                        </label>
+                        <label>
+                            <input type="checkbox" name="services" value="audio-production">
+                            Audio Production
+                        </label>
+                        <label>
+                            <input type="checkbox" name="services" value="animation">
+                            Animation & Motion Graphics
+                        </label>
+                        <label>
+                            <input type="checkbox" name="services" value="editing">
+                            Post-Production Editing
+                        </label>
+                        <label>
+                            <input type="checkbox" name="services" value="consultation">
+                            Creative Consultation
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Experience Level Fieldset -->
+                <fieldset>
+                    <legend>Your Experience Level *</legend>
+                    <p style="font-size: 0.95rem; color: #666; margin-bottom: 1rem;">Select one option:</p>
+                    
+                    <!-- Radio buttons for single selection -->
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="experience" value="first-time" required>
+                            First Time Working with Media Production
+                        </label>
+                        <label>
+                            <input type="radio" name="experience" value="some-experience">
+                            Some Experience
+                        </label>
+                        <label>
+                            <input type="radio" name="experience" value="extensive">
+                            Extensive Experience
+                        </label>
+                        <label>
+                            <input type="radio" name="experience" value="agency">
+                            Agency/Company Production
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Message Fieldset -->
+                <fieldset>
+                    <legend>Project Details</legend>
+                    
+                    <!-- Message textarea -->
+                    <label for="message">Project Description *</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your project, goals, and any specific requirements..." required minlength="10" maxlength="2000" style="resize: vertical; min-height: 150px;"></textarea>
+                </fieldset>
+
+                <!-- Additional Information Fieldset -->
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    
+                    <!-- Preference - Select/Dropdown -->
+                    <label for="contact-method">Preferred Contact Method</label>
+                    <select id="contact-method" name="contact-method">
+                        <option value="email">Email</option>
+                        <option value="phone">Phone</option>
+                        <option value="either">Either Email or Phone</option>
+                    </select>
+                    
+                    <!-- Verification - Checkbox for terms -->
+                    <div class="checkbox-group" style="margin-top: 1.5rem;">
+                        <label>
+                            <input type="checkbox" name="terms" required>
+                            I agree to the terms and conditions and privacy policy
+                        </label>
+                        <label>
+                            <input type="checkbox" name="newsletter">
+                            Subscribe me to receive updates and project announcements
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Form Buttons -->
+                <div style="display: flex; gap: 1rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #ddd;">
+                    <button type="submit" class="hover-scale">Send Message</button>
+                    <input type="reset" value="Clear Form" class="hover-scale">
+                </div>
+                
+                <p style="font-size: 0.9rem; color: #666; margin-top: 1rem; text-align: center;">
+                    We'll review your request and get back to you within 24-48 hours during business days.
+                </p>
+            </form>
+        </section>
+
+        <!-- FAQ Section -->
+        <section>
+            <article>
+                <h2>Frequently Asked Questions</h2>
+                
+                <h3 style="margin-top: 1.5rem;">What types of projects do you handle?</h3>
+                <p>We handle a wide variety of projects including corporate videos, commercials, documentaries, podcasts, audio production, animations, and multimedia solutions. If you can describe it, we can likely produce it!</p>
+                
+                <h3 style="margin-top: 1.5rem;">What is your typical turnaround time?</h3>
+                <p>Timeline depends on project scope and complexity. We typically provide estimates during the initial consultation. Most projects range from 2-8 weeks depending on requirements.</p>
+                
+                <h3 style="margin-top: 1.5rem;">Do you offer revisions?</h3>
+                <p>Yes! We include revision rounds in our project packages. The number of revisions depends on your specific package. We strive for client satisfaction.</p>
+                
+                <h3 style="margin-top: 1.5rem;">What is your pricing structure?</h3>
+                <p>Pricing is project-dependent and based on scope, complexity, timeline, and resources required. We provide detailed quotes after discussing your specific needs.</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Email:</strong> contact@mediaproduction.com</p>
+        <p><strong>Phone:</strong> 555-0123</p>
+        <p><strong>Address:</strong> 123 Media Street, Production City, PC 12345</p>
+        <p>&copy; 2025 Media Production Company. All rights reserved.</p>
+    </footer>
 </body>
 </html>

@@ -1,50 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Media Gallery</title>
+    <!-- Metadata: Complete metadata for SEO and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Media Gallery - Video, audio, and multimedia content showcasing our production quality">
+    <meta name="keywords" content="media gallery, videos, audio, portfolio, media samples">
+    <meta name="author" content="Media Production Company">
+    
+    <!-- Page Title -->
+    <title>Media Gallery - Media Production Company</title>
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="top">
+    <!-- Header with Navigation - Semantic HTML -->
+    <header>
         <h1>Media Gallery</h1>
-        <div class="nav">
+        <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="media.html">Media</a>
             <a href="contact.html">Contact</a>
-        </div>
-    </div>
-    
-    <div>
-        <h2>Video Showcase</h2>
-        
-        <!-- First video - missing controls and fallback -->
-        <video src="media/sample1.mp4" width="640" height="360"></video>
-        
-        <!-- Second video missing entirely -->
-    </div>
-    
-    <div>
-        <h2>Audio Sample</h2>
-        <!-- Audio element missing completely -->
-        <p>Listen to our audio production quality.</p>
-    </div>
-    
-    <div>
-        <h2>Location</h2>
-        <!-- iframe missing completely -->
-        <p>Visit our studio at 123 Media Street</p>
-    </div>
-    
-    <div>
-        <h2>Client Testimonials</h2>
-        <img src="images/client1.jpg">
-        <img src="images/client2.jpg">
-        <!-- Missing figure/figcaption semantic markup -->
-    </div>
-    
-    <div class="bottom">
-        <p>Email: contact@mediaproduction.com</p>
-    </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Video Showcase Section -->
+        <section>
+            <h2>Video Showcase</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Professional video production samples demonstrating our technical expertise and creative quality.</p>
+            
+            <!-- First Video - With controls and fallback content -->
+            <div class="video-container">
+                <video controls>
+                    <source src="media/sample1.mp4" type="video/mp4">
+                    <p>Your browser does not support the video tag. Please upgrade your browser or download the video: <a href="media/sample1.mp4">sample1.mp4</a></p>
+                </video>
+            </div>
+            <p style="text-align: center; margin-top: 1rem; color: #666; font-style: italic;">Sample video demonstrating professional production quality and techniques</p>
+            
+            <!-- Second Video - With controls and fallback content -->
+            <div class="video-container" style="margin-top: 3rem;">
+                <video controls>
+                    <source src="media/sample2.mp4" type="video/mp4">
+                    <p>Your browser does not support the video tag. Please upgrade your browser or download the video: <a href="media/sample2.mp4">sample2.mp4</a></p>
+                </video>
+            </div>
+            <p style="text-align: center; margin-top: 1rem; color: #666; font-style: italic;">Additional video sample showcasing different production styles and capabilities</p>
+        </section>
+
+        <!-- Audio Sample Section -->
+        <section>
+            <h2>Audio Production Sample</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Experience our studio-quality audio production capabilities. Professionally recorded, edited, and mastered audio content.</p>
+            
+            <div class="audio-container">
+                <p><strong>🎵 Professional Audio Sample:</strong></p>
+                <audio controls>
+                    <source src="media/sample_audio.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element. <a href="media/sample_audio.mp3">Download the audio file</a> to listen offline.
+                </audio>
+                <p style="margin-top: 1rem; font-size: 0.95rem; color: #666;">This audio sample demonstrates our professional recording, mixing, and mastering capabilities. Quality audio is essential for professional content.</p>
+            </div>
+        </section>
+
+        <!-- Location/Embedded Map Section -->
+        <section>
+            <h2>Visit Our Studio</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Located in the heart of the city, our state-of-the-art facility is designed for optimal production quality.</p>
+            
+            <p><strong>📍 Studio Location:</strong> 123 Media Street, Production City, PC 12345</p>
+            <p style="margin-bottom: 1.5rem;">We welcome site visits to explore our facilities and discuss your project requirements in person.</p>
+            
+            <!-- Embedded Map using iframe -->
+            <div class="iframe-container" style="margin: 2rem 0;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1234567890!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjEiTiA3NMKwMDAnMjEuNiJX!5e0!3m2!1sen!2sus!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p style="text-align: center; color: #666; font-size: 0.95rem;"><em>Note: Map location is for demonstration purposes. Replace with actual studio location coordinates.</em></p>
+        </section>
+
+        <!-- Client Testimonials with Semantic Images -->
+        <section>
+            <h2>Client Testimonials</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Feedback from our satisfied clients showcasing the quality of our work and professionalism.</p>
+            
+            <div class="portfolio-grid">
+                <!-- Testimonial 1 with Figure/Figcaption -->
+                <figure class="portfolio-item">
+                    <img src="images/client1.jpg" alt="John Smith - Corporate Client">
+                    <figcaption>
+                        <strong>John Smith</strong><br>
+                        <em style="color: #666;">CEO, Tech Solutions Inc.</em><br><br>
+                        "Their video production work exceeded all our expectations. Professional, creative, and delivered on time."
+                    </figcaption>
+                </figure>
+                
+                <!-- Testimonial 2 with Figure/Figcaption -->
+                <figure class="portfolio-item">
+                    <img src="images/client2.jpg" alt="Maria Garcia - Creative Agency">
+                    <figcaption>
+                        <strong>Maria Garcia</strong><br>
+                        <em style="color: #666;">Creative Director, Brand Studio</em><br><br>
+                        "Working with them was a game-changer for our multimedia projects. Highly recommended!"
+                    </figcaption>
+                </figure>
+                
+                <!-- Testimonial 3 with Figure/Figcaption -->
+                <figure class="portfolio-item">
+                    <img src="images/service1.jpg" alt="David Lee - Education Sector">
+                    <figcaption>
+                        <strong>David Lee</strong><br>
+                        <em style="color: #666;">Production Coordinator, Learning Media</em><br><br>
+                        "Excellent audio quality and impeccable attention to detail in every project."
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Gallery Display Section with Figure/Figcaption -->
+        <section>
+            <h2>Full Media Gallery</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Browse our complete collection of production samples and portfolio work.</p>
+            
+            <div class="portfolio-grid">
+                <figure class="portfolio-item">
+                    <img src="images/work1.jpg" alt="Corporate video production">
+                    <figcaption>Corporate Video Production</figcaption>
+                </figure>
+                <figure class="portfolio-item">
+                    <img src="images/work2.jpg" alt="Commercial advertisement production">
+                    <figcaption>Commercial Advertisement</figcaption>
+                </figure>
+                <figure class="portfolio-item">
+                    <img src="images/work3.jpg" alt="Documentary production work">
+                    <figcaption>Documentary Production</figcaption>
+                </figure>
+                <figure class="portfolio-item">
+                    <img src="images/hero-image.jpg" alt="Event coverage production">
+                    <figcaption>Event Coverage</figcaption>
+                </figure>
+                <figure class="portfolio-item">
+                    <img src="images/service1.jpg" alt="Studio recording session">
+                    <figcaption>Studio Recording</figcaption>
+                </figure>
+                <figure class="portfolio-item">
+                    <img src="images/service2.jpg" alt="Post-production editing work">
+                    <figcaption>Post-Production Work</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Email:</strong> contact@mediaproduction.com</p>
+        <p><strong>Phone:</strong> 555-0123</p>
+        <p>&copy; 2025 Media Production Company. All rights reserved.</p>
+    </footer>
 </body>
 </html>
