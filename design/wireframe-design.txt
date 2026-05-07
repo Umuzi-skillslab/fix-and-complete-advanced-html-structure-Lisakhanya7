@@ -1,0 +1,298 @@
+# Website Wireframe and Layout Strategy
+
+## Site Structure Overview
+
+### Navigation Flow
+```
+Homepage (index.html)
+├── Header/Navigation
+├── Hero Section
+├── Services Section (3 cards)
+├── Why Choose Us Section
+├── Featured Works Gallery (3 items)
+├── Call to Action
+└── Footer
+
+About Page (about.html)
+├── Header/Navigation
+├── Team Information
+├── Team Members (3 profiles)
+├── Services Breakdown (3 cards flexbox)
+├── Why We Excel
+├── Portfolio Gallery (6 items grid)
+└── Footer
+
+Media Page (media.html)
+├── Header/Navigation
+├── Video Showcase (2 videos with controls)
+├── Audio Sample (audio player)
+├── Location with Embedded Map (iframe)
+├── Client Testimonials (3 figure/figcaption)
+├── Full Media Gallery (6 items grid)
+└── Footer
+
+Contact Page (contact.html)
+├── Header/Navigation
+├── Contact Information
+├── Comprehensive Contact Form (6 fieldsets)
+│   ├── Personal Information (4 inputs)
+│   ├── Project Information (4 inputs)
+│   ├── Services Interest (5 checkboxes)
+│   ├── Experience Level (4 radio buttons)
+│   ├── Project Details (textarea)
+│   └── Additional Info (2 selects, 2 checkboxes)
+├── FAQ Section
+└── Footer
+```
+
+## Responsive Breakpoints
+
+### Desktop (1200px+)
+- Full width content with max-width container
+- Navigation items displayed horizontally
+- Services cards: 3 columns (flex)
+- Portfolio gallery: 3-4 columns (grid)
+- Hero height: 500px
+- All flexbox and grid features active
+
+### Tablet (768px - 1199px)
+- Slightly reduced content width with padding
+- Navigation items still horizontal with wrapping enabled
+- Services cards: 2 columns on medium tablet, 3 small tablets
+- Portfolio gallery: 2-3 columns
+- Hero height: 400px
+- Grid and flexbox responsive features engaged
+
+### Mobile (480px - 767px)
+- Full width with mobile padding
+- Navigation stacks vertically
+- All cards stack to 1 column
+- Portfolio gallery: single column
+- Hero height: 300px
+- Simplified layout, all functionality preserved
+
+### Small Mobile (<480px)
+- Full width, optimized padding
+- Navigation: vertical stack
+- Single column everything
+- Hero height: 250px
+- Touch-friendly buttons (larger tap targets)
+
+## Layout Components
+
+### 1. Header and Navigation (Flexbox Layout)
+```
+┌─────────────────────────────────────┐
+│ Company Logo / Title                │
+│                                     │
+│ Home  About  Media  Contact         │
+└─────────────────────────────────────┘
+
+Desktop: Horizontal flex layout
+Mobile: Vertical stack with hamburger indicator
+```
+
+### 2. Hero Section
+```
+┌─────────────────────────────────────┐
+│                                     │
+│   Professional Media Production     │
+│        Services Headline            │
+│                                     │
+│     Descriptive tagline here        │
+│                                     │
+└─────────────────────────────────────┘
+
+Background Gradient: Accent color gradient
+Height: Responsive (500px desktop → 250px mobile)
+Animation: Fade-in on load
+```
+
+### 3. Services Container (Flexbox)
+```
+Desktop:
+┌──────────┬──────────┬──────────┐
+│ Service1 │ Service2 │ Service3 │
+│          │          │          │
+└──────────┴──────────┴──────────┘
+
+Tablet:
+┌──────────┬──────────┐
+│ Service1 │ Service2 │
+│          │          │
+│ Service3 │          │
+│          │          │
+└──────────┴──────────┘
+
+Mobile:
+┌──────────┐
+│ Service1 │
+│          │
+├──────────┤
+│ Service2 │
+│          │
+├──────────┤
+│ Service3 │
+│          │
+└──────────┘
+
+Flexbox Properties:
+- justify-content: space-between
+- align-items: stretch  
+- flex-wrap: wrap
+- gap: 2rem
+```
+
+### 4. Portfolio Gallery (CSS Grid)
+```
+Desktop (auto-fit, minmax(280px, 1fr)):
+┌────────┬────────┬────────┐
+│ Item1  │ Item2  │ Item3  │
+├────────┼────────┼────────┤
+│ Item4  │ Item5  │ Item6  │
+└────────┴────────┴────────┘
+
+Tablet (2-3 columns):
+┌────────┬────────┐
+│ Item1  │ Item2  │
+├────────┼────────┤
+│ Item3  │ Item4  │
+├────────┼────────┤
+│ Item5  │ Item6  │
+└────────┴────────┘
+
+Mobile (1 column):
+┌────────┐
+│ Item1  │
+├────────┤
+│ Item2  │
+├────────┤
+│ Item3  │
+└────────┘
+```
+
+### 5. Form Layout (Fieldsets)
+```
+┌─────────────────────────────────────┐
+│ CONTACT FORM                        │
+│─────────────────────────────────────│
+│ Personal Information                │
+│  Name: [_________________]          │
+│  Email: [_________________]         │
+│  Phone: [_________________]         │
+│─────────────────────────────────────│
+│ Project Information                 │
+│  Type: [Select dropdown]            │
+│  Budget: [_________________]        │
+│  Date: [_________________]          │
+│─────────────────────────────────────│
+│ Services Interested In              │
+│  ☑ Video  ☑ Audio  ☑ Animation    │
+│─────────────────────────────────────│
+│ Experience Level                    │
+│  ○ First Time  ○ Some  ○ Expert   │
+│─────────────────────────────────────│
+│ Details                             │
+│  Message: [__________________]      │
+│           [__________________]      │
+│─────────────────────────────────────│
+│  [Submit]  [Clear]                 │
+└─────────────────────────────────────┘
+```
+
+### 6. Media Elements Layout
+
+#### Videos
+```
+┌──────────────────────────┐
+│                          │
+│   Video Player           │ (640x360px responsive)
+│   [► Controls ○•••]      │
+│                          │
+└──────────────────────────┘
+Description text below
+```
+
+#### Audio
+```
+┌──────────────────────────┐
+│ 🎵 Audio Sample          │
+│ [► Controls ••••••• □ ▼] │
+│ Description              │
+└──────────────────────────┘
+```
+
+#### Embedded Map (iframe)
+```
+┌──────────────────────────────────┐
+│                                  │
+│     Google Map iFrame            │
+│     (Responsive container)       │
+│                                  │
+└──────────────────────────────────┘
+Location description below
+```
+
+### 7. Footer
+```
+┌──────────────────────────────────┐
+│  Email: contact@company.com      │
+│  Phone: 555-0123                 │
+│  © 2025 Company. All rights...   │
+└──────────────────────────────────┘
+```
+
+## CSS Features by Layout Type
+
+### Flexbox Features Used
+1. Navigation: `flex-direction: row` → `column` (mobile)
+2. Services: `justify-content: space-between`, `align-items: stretch`
+3. Responsive wrapping with `flex-wrap: wrap`
+
+### Grid Features Used
+1. Portfolio: `grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))`
+2. Auto-fit responsive columns
+3. Grid-gap for spacing
+
+### Animation Features
+1. Hero fade-in on page load
+2. Slide-in animations for content
+3. Hover scale effects on cards
+4. Smooth transitions on all interactive elements
+
+## Design System
+
+### Color Palette
+- Primary: #1a1a1a (Dark)
+- Secondary: #ff6b35 (Orange)
+- Accent: #004e89 (Blue)
+- Light Background: #f5f5f5
+- Text Dark: #333
+- Text Light: #666
+- White: #fff
+
+### Typography
+- Font Family: 'Segoe UI', Tahoma, Geneva, sans-serif
+- h1: 2.5rem, gradient text
+- h2: 2rem, text-shadow
+- h3: 1.5rem
+- p: 1rem, line-height 1.6
+
+### Spacing
+- Gap/margin: 2rem (sections), 1rem (inner)
+- Padding: 2rem (cards), 1rem (text)
+
+### Effects
+- Transitions: 0.3s ease
+- Transforms: scale, translate, rotate
+- Animations: 2s, infinite loop on pulse
+
+## Consistency across Pages
+
+All pages maintain:
+- Same header/navigation structure
+- Consistent footer design
+- Same color scheme
+- Responsive behavior at all breakpoints
+- Accessible forms and interactive elements
+- Proper semantic HTML structure

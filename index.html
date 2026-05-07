@@ -1,33 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Media Production</title>
+    <!-- Metadata: Charset and viewport for responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional media production services - video, audio, and multimedia solutions for businesses">
+    <meta name="keywords" content="video production, audio recording, media services, multimedia solutions">
+    <meta name="author" content="Media Production Company">
+    
+    <!-- Page Title -->
+    <title>Home - Media Production Company</title>
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="top">
+    <!-- Header with Navigation - Semantic HTML (Flexbox Layout #1) -->
+    <header>
         <h1>Media Production Company</h1>
-        <div class="nav">
+        <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="media.html">Media</a>
             <a href="contact.html">Contact</a>
-        </div>
-    </div>
-    
-    <div class="hero">
-        <h2>Professional Media Production Services</h2>
-        <p>We create stunning visual content for your business needs.</p>
-    </div>
-    
-    <div class="content">
-        <h2>What We Do</h2>
-        <p>Video production, audio recording, and multimedia solutions for businesses of all sizes.</p>
-    </div>
-    
-    <div class="bottom">
-        <p>Email: contact@mediaproduction.com</p>
-        <p>Phone: 555-0123</p>
-    </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>Professional Media Production Services</h2>
+            <p>We create stunning visual content for your business needs with cutting-edge technology and creative excellence.</p>
+        </section>
+
+        <!-- What We Do Section -->
+        <section>
+            <article>
+                <h2>What We Do</h2>
+                <p>We specialize in comprehensive media production including video production, audio recording, and multimedia solutions for businesses of all sizes. Our team combines technical expertise with creative vision to deliver exceptional results.</p>
+            </article>
+        </section>
+
+        <!-- Services Section with Flexbox Layout #2 -->
+        <section>
+            <h2>Our Services</h2>
+            <div class="services-container">
+                <div class="service-card transition-shadow">
+                    <h3>🎬 Video Production</h3>
+                    <p>Professional video creation for corporate presentations, commercials, documentaries, and creative projects. We handle pre-production planning, filming, and post-production editing.</p>
+                </div>
+                <div class="service-card transition-shadow">
+                    <h3>🎙️ Audio Recording</h3>
+                    <p>Studio-quality audio production and editing services. From podcasts to musical recordings, we deliver crystal-clear sound with professional mastering and mixing.</p>
+                </div>
+                <div class="service-card transition-shadow">
+                    <h3>📱 Multimedia Solutions</h3>
+                    <p>Comprehensive multimedia design and development including animations, interactive content, and integrated media experiences for digital platforms.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section>
+            <article class="animate-fade-in">
+                <h2>Why Choose Us?</h2>
+                <p><strong>Expertise:</strong> Over 15 years of experience in professional media production across diverse industries and project types.</p>
+                <p><strong>Quality:</strong> We use state-of-the-art equipment and follow industry best practices to ensure every project meets the highest standards.</p>
+                <p><strong>Creativity:</strong> Our team brings innovative ideas and artistic vision to every project, ensuring your brand stands out.</p>
+                <p><strong>Reliability:</strong> We deliver on time, on budget, and with exceptional attention to detail.</p>
+            </article>
+        </section>
+
+        <!-- Featured Work Sample with Grid Layout -->
+        <section>
+            <h2>Featured Works</h2>
+            <div class="portfolio-grid">
+                <figure class="portfolio-item">
+                    <img src="images/work1.jpg" alt="Corporate Video Production Project">
+                    <figcaption>Corporate Video Production</figcaption>
+                </figure>
+                <figure class="portfolio-item">
+                    <img src="images/work2.jpg" alt="Commercial Advertisement">
+                    <figcaption>Commercial Advertisement</figcaption>
+                </figure>
+                <figure class="portfolio-item">
+                    <img src="images/work3.jpg" alt="Documentary Production">
+                    <figcaption>Documentary Production</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="transition-bg" style="margin-top: 3rem; padding: 3rem; border-radius: 8px;">
+            <h2 style="color: white; text-shadow: none;">Ready to Bring Your Vision to Life?</h2>
+            <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.1rem;">Contact us today to discuss your media production project and get a free consultation.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Email:</strong> contact@mediaproduction.com</p>
+        <p><strong>Phone:</strong> 555-0123</p>
+        <p>&copy; 2025 Media Production Company. All rights reserved.</p>
+    </footer>
 </body>
 </html>

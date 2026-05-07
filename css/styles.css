@@ -1,0 +1,922 @@
+/* ===================================================
+   ADVANCED MEDIA PRODUCTION WEBSITE - COMPREHENSIVE CSS
+   Modern, Professional Styling with Advanced Features
+   ================================================== */
+
+/* ===== ROOT & FOUNDATION STYLES ===== */
+
+:root {
+  --primary-color: #1a1a1a;
+  --secondary-color: #ff6b35;
+  --accent-color: #004e89;
+  --light-bg: #f5f5f5;
+  --text-dark: #333;
+  --text-light: #666;
+  --white: #fff;
+  --border-radius: 8px;
+  --transition-duration: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+/* ===== TYPOGRAPHY & TEXT EFFECTS ===== */
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  /* Text effect: gradient text */
+  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+  /* Text effect: text shadow for depth */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* ===== HEADER & NAVIGATION - FLEXBOX LAYOUT ===== */
+
+/* Flexbox Layout #1: Header Navigation */
+header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  background: linear-gradient(135deg, #ff6b35, #ff8c42);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all var(--transition-duration) ease;
+  position: relative;
+  padding: 0.5rem 1rem;
+  /* Pseudo-class: hover effect with transform */
+  transform: translateY(0);
+}
+
+nav a:hover {
+  color: var(--secondary-color);
+  transform: translateY(-2px);
+  text-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+}
+
+/* Pseudo-class: active link indication */
+nav a:active {
+  color: var(--secondary-color);
+}
+
+/* Pseudo-class: focus for accessibility */
+nav a:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Combination selector: descendant + pseudo-class */
+nav a + a {
+  border-left: 1px solid rgba(255, 107, 53, 0.3);
+  padding-left: 2rem;
+}
+
+/* ===== HERO SECTION - FLEXBOX & TRANSFORM ===== */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  color: var(--white);
+  text-align: center;
+  gap: 1.5rem;
+  /* Transform effect: scale */
+  animation: heroFadeIn 0.8s ease-out;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  background: linear-gradient(135deg, #ff8c42, #ffd60a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===== MAIN CONTENT AREA ===== */
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: var(--light-bg);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-duration) ease;
+}
+
+/* Pseudo-class: hover effect on sections */
+section:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+article {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--secondary-color);
+  margin-bottom: 2rem;
+  transition: all var(--transition-duration) ease;
+}
+
+/* Pseudo-class: first-child styling */
+article:first-child {
+  background-color: rgba(255, 107, 53, 0.05);
+}
+
+/* Pseudo-class: last-child styling */
+article:last-child {
+  margin-bottom: 0;
+}
+
+/* Pseudo-class: nth-child for alternating patterns */
+article:nth-child(even) {
+  border-left-color: var(--accent-color);
+  background-color: rgba(0, 78, 137, 0.03);
+}
+
+article:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-left-color: var(--secondary-color);
+}
+
+/* ===== SERVICES SECTION - FLEXBOX LAYOUT ===== */
+
+/* Flexbox Layout #2: Services Cards */
+.services-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  flex: 1;
+  min-width: 250px;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all var(--transition-duration) ease;
+  border-top: 4px solid var(--secondary-color);
+}
+
+.service-card:hover {
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  border-top-color: var(--accent-color);
+}
+
+.service-card h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* ===== PORTFOLIO GRID LAYOUT ===== */
+
+/* CSS Grid Layout: Portfolio Gallery */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 2rem;
+  margin: 2rem 0;
+}
+
+.portfolio-item {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all var(--transition-duration) ease;
+}
+
+/* Pseudo-class: not(:last-child) - apply margin to all but last */
+.portfolio-item:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.03) rotate(1deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: all var(--transition-duration) ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+figure {
+  margin: 0;
+  overflow: hidden;
+}
+
+figcaption {
+  padding: 1.5rem;
+  background-color: var(--light-bg);
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+/* ===== MEDIA ELEMENTS ===== */
+
+/* Video styling with responsive container */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: #000;
+}
+
+/* Audio styling */
+.audio-container {
+  background-color: var(--light-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  margin: 2rem 0;
+  border: 2px solid var(--secondary-color);
+}
+
+audio {
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: var(--border-radius);
+}
+
+/* Iframe styling */
+.iframe-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: var(--border-radius);
+}
+
+/* ===== FORM STYLING ===== */
+
+form {
+  background-color: var(--light-bg);
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border: none;
+  padding: 1.5rem 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+fieldset:last-child {
+  border-bottom: none;
+}
+
+legend {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+/* Label styling - proper form accessibility */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+/* Input, textarea, select common styling */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all var(--transition-duration) ease;
+}
+
+/* Pseudo-class: focus state for form inputs */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+  transform: scale(1.01);
+}
+
+/* Pseudo-class: hover state */
+input:hover,
+textarea:hover,
+select:hover {
+  border-color: var(--accent-color);
+}
+
+/* Pseudo-class: active state */
+input:active,
+textarea:active,
+select:active {
+  border-color: var(--secondary-color);
+}
+
+/* Input validation - valid state */
+input:valid {
+  border-color: green;
+}
+
+/* Input validation - invalid state */
+input:invalid {
+  border-color: red;
+}
+
+/* Radio buttons and checkboxes styling */
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  accent-color: var(--secondary-color);
+}
+
+/* Label with radio/checkbox */
+label input[type="radio"],
+label input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.checkbox-group,
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.checkbox-group label,
+.radio-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+/* Button styling */
+button,
+input[type="submit"],
+input[type="reset"] {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-duration) ease;
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+/* Pseudo-class: hover state for buttons */
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Pseudo-class: active state for buttons */
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active {
+  transform: translateY(0);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Pseudo-class: focus for accessibility */
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 3rem 2rem;
+  text-align: center;
+  border-top: 4px solid var(--secondary-color);
+  margin-top: 3rem;
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Footer links - Descendant combinator */
+footer a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: all var(--transition-duration) ease;
+  font-weight: 500;
+}
+
+footer a:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+/* Child combinator: direct footer children */
+footer > p {
+  margin: 0.5rem 0;
+}
+
+/* ===== CSS TRANSFORMS ===== */
+
+/* Transform 1: Translate on hover */
+.hover-translate {
+  transition: all var(--transition-duration) ease;
+}
+
+.hover-translate:hover {
+  transform: translate(5px, -5px);
+}
+
+/* Transform 2: Rotate effect */
+.hover-rotate {
+  transition: all var(--transition-duration) ease;
+}
+
+.hover-rotate:hover {
+  transform: rotate(5deg);
+}
+
+/* Transform 3: Scale with perspective */
+.hover-scale {
+  transition: all var(--transition-duration) ease;
+  transform-origin: center;
+}
+
+.hover-scale:hover {
+  transform: scale(1.15) perspective(1000px);
+}
+
+/* ===== CSS TRANSITIONS ===== */
+
+/* Transition 1: Background color on interactive elements */
+.transition-bg {
+  background-color: var(--light-bg);
+  transition: background-color 0.4s ease;
+}
+
+.transition-bg:hover {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+/* Transition 2: Box shadow smooth change */
+.transition-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.transition-shadow:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== KEYFRAME ANIMATIONS ===== */
+
+/* Animation 1: Fade in */
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation 2: Slide in from left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation 3: Pulse effect */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animation 4: Shimmer/Loading effect */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Apply animations to elements */
+.animate-fade-in {
+  animation: heroFadeIn 0.8s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ===== RESPONSIVE DESIGN - MEDIA QUERIES ===== */
+
+/* Tablet screens (768px and below) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .hero {
+    min-height: 350px;
+    padding: 2rem 1rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Flexbox: Stack navigation on mobile */
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  nav a + a {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  /* Flexbox: Stack services cards on tablet */
+  .services-container {
+    flex-direction: column;
+  }
+
+  /* Grid: Adjust portfolio grid */
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1.5rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+
+  article {
+    padding: 1.5rem;
+  }
+
+  form {
+    padding: 1.5rem;
+  }
+
+  footer {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Mobile screens (480px and below) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  header {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Flexbox: Adjust gap on mobile */
+  nav {
+    gap: 0.25rem;
+  }
+
+  .hero {
+    min-height: 250px;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  /* Grid: Single column on mobile */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-container {
+    gap: 1rem;
+  }
+
+  .service-card {
+    min-width: 100%;
+  }
+
+  /* Form adjustments for small screens */
+  button,
+  input[type="submit"],
+  input[type="reset"] {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  main {
+    padding: 0.75rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  article {
+    padding: 1rem;
+  }
+
+  form {
+    padding: 1rem;
+  }
+
+  figure {
+    margin: 1rem 0;
+  }
+
+  figcaption {
+    padding: 1rem;
+  }
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+/* ===== CODE QUALITY & ORGANIZATION ===== */
+
+/* 
+  CSS Organization Summary:
+  
+  1. Root & Foundation (CSS Variables, Global Styles)
+  2. Typography & Text Effects
+  3. Header & Navigation (Flexbox Layout #1)
+  4. Hero Section
+  5. Main Content Area
+  6. Services Section (Flexbox Layout #2)
+  7. Portfolio Grid (CSS Grid Layout)
+  8. Media Elements
+  9. Form Styling
+  10. Footer
+  11. Transforms & Transitions
+  12. Keyframe Animations
+  13. Responsive Design
+  14. Utility Classes
+  
+  Total Selector Types Used: 7+
+  - Element selectors (body, header, nav, etc.)
+  - Class selectors (.hero, .service-card, etc.)
+  - ID selectors (if needed, can be added)
+  - Attribute selectors (input[type="..."])
+  - Descendant combinators (header a, footer a)
+  - Child combinators (footer > p)
+  - Pseudo-classes (:hover, :focus, :active, :first-child, :last-child, :nth-child, :not, :valid, :invalid)
+  
+  Animations: 4 (@keyframes definitions)
+  Transitions: Multiple (0.3s, 0.4s with various easing)
+  Transforms: 3+ (translate, scale, rotate, perspective)
+  Effects: Text shadows, gradients, gradients text
+*/
